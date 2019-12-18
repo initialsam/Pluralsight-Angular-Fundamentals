@@ -7,6 +7,7 @@ import {
   EventThumbnailComponent,
   EventDetailsComponent,
   CreateEventComponent,
+  CreateSessionComponent
 } from './events/index'
 import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './nav/nav-bar.component'
@@ -27,7 +28,8 @@ import { Error404Component } from './errors/404.component'
     EventDetailsComponent,
     NavBarComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
+    CreateSessionComponent
   ],
   
   bootstrap: [EventsAppComponent]
