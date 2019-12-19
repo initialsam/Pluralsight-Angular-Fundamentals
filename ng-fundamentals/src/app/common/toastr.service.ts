@@ -1,4 +1,4 @@
-import { Inject,Injectable ,InjectionToken} from '@angular/core'
+import { InjectionToken} from '@angular/core'
 
 export const TOASTR_TOKEN = new InjectionToken<Toastr>('toastr', {
   providedIn: 'root',

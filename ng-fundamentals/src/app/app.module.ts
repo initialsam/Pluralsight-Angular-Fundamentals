@@ -15,7 +15,11 @@ import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './nav/nav-bar.component'
 import { appRoutes } from './routes'
 import { Error404Component } from './errors/404.component'
-import { CollapsibleWellComponent } from './common/collapsible-well.component'
+import {
+  CollapsibleWellComponent,
+  SimpleModalComponent,
+  ModalTriggerDirective
+} from './common/index'
 
 @NgModule({
   imports: [
@@ -35,7 +39,9 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component'
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective
   ],
   
   bootstrap: [EventsAppComponent]
