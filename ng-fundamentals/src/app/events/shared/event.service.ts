@@ -53,7 +53,7 @@ const EVENTS:IEvent[] = [
         },
         {
           id: 2,
-          name: "Getting the most out of your dev team",
+          name: "Z Getting the most out of your dev team",
           presenter: "Jeff Cross",
           duration: 1,
           level: "Intermediate",

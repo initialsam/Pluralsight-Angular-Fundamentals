@@ -13,7 +13,9 @@ import { EventService,IEvent,ISession } from '../shared/index'
 export class EventDetailsComponent {
   event:IEvent
   addMode:boolean
-
+  _filterBy: string = 'all';
+  _sortBy: string = 'votes';
+  
   constructor(private eventService:EventService, private route: ActivatedRoute) {}
   ngOnInit() {
     this.event = this.eventService.getEvent(+this.route.snapshot.params['id'])

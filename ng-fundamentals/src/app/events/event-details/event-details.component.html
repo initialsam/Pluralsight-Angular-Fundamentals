@@ -24,17 +24,29 @@
 
 
 <hr>
-<div class="row">
+<div class="row" style="margin-bottom:10px">
   <div class="col-md-2">
     <h3 style="margin:0">Sessions</h3>
   </div>
+  <div class="col-md-7">
+    <div class="btn-group btn-group-sm" style="margin-right:20px;margin-left:20px">
+      <button class="btn btn-default" [class.active]="_sortBy==='name'" (click)="_sortBy='name'">By Name</button>
+      <button class="btn btn-default" [class.active]="_sortBy==='votes'" (click)="_sortBy='votes'">By Votes</button>
+    </div>
 
+    <div class="btn-group btn-group-sm">
+      <button class="btn btn-default" [class.active]="_filterBy==='all'" (click)="_filterBy='all'">All</button>
+      <button class="btn btn-default" [class.active]="_filterBy==='beginner'" (click)="_filterBy='beginner'">Beginner</button>
+      <button class="btn btn-default" [class.active]="_filterBy==='intermediate'" (click)="_filterBy='intermediate'">Intermediate</button>
+      <button class="btn btn-default" [class.active]="_filterBy==='advanced'" (click)="_filterBy='advanced'">Advanced</button>
+    </div>
+  </div>
   <div class="col-md-2">
     <a (click)="addSession()">Add Session</a>
   </div>
 </div>
 
-<session-list *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
+<session-list [filterBy]="_filterBy" [sortBy]="_sortBy" *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
 <create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)" (cancelAddSession)="cancelAddSession()"></create-session>
 
 
